@@ -1,0 +1,118 @@
+﻿<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<script>alert("Click the invoice icon at the top right of the next page to download");</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="font:normal 12px Helvetica, Verdana, Arial, sans-serif;">
+
+
+
+
+<div class="w3-card-4 w3-dark-grey">
+<div class="w3-container w3-white">
+<div class="w3-row">
+  <div class="w3-col s6 w3-white w3-center">
+  <h1 class="w3-text-black" style="text-shadow:1px 1px 0 #444">
+                <b style="padding-right:260.14px;"><img src="static/images/ce1.jpg" style="max-width:250;"></b></h1>
+  <p>
+    <div style="padding-right:300.14px;top:89.58px;" ><img src="static/images/home.png" style="max-width:25;">Credequity Nigeria Limited.</div>
+    <div style="padding-right:90.14px;top:115.96px">   13a Charles Ifeanyi, off Adebayo Doherty, Lekki Phase 1, Lagos, Nigeria</div>
+    <div style="padding-right:340.14px;top:130.41px"><img src="static/images/phone.jpg" style="max-width:25;">       +234-903-188-8550</div>
+    <div style="padding-right:310.14px;top:144.81px"><img src="static/images/email.png" style="max-width:25;">       support@credequity.com</div>
+  </p></div>
+  <a href="{{url_for('download')}}"><div class="w3-col s6 w3- w3-center" style="padding-left:410.14px;"><img src="static/images/invoice.png" style="max-width:100;"></div></a>
+</div>
+  
+  <hr>
+  <div class="w3-row">
+  <div class="w3-col s4 w3-white w3-center" style="font:bold 14px Calibri, Verdana, Arial, sans-serif;"><p>BILLED TO:  {{Company}}</p></div>
+  <div class="w3-col s4 w3-white w3-center" style="font:bold 14px Calibri, Verdana, Arial, sans-serif;"><p>DATE OF ISSUE: {{today}}</p></div>
+  <div class="w3-col s4 w3-white w3-center" style="font:bold 14px Calibri, Verdana, Arial, sans-serif;"><p>INVOICE #{{InvoiceNo}}</p></div>
+</div>
+  
+  
+  <br>
+  
+  <p style="font:bold 16px Calibri, Verdana, Arial, sans-serif;"> 
+  <hr>
+</div>
+
+
+
+
+
+<div class="w3-container w3-white ">
+  <div class="w3-row">
+  
+  <div class="w3-col l12 w3-white w3-center"><p><table class="w3-table" style="font:normal 16px Calibri, Verdana, Arial, sans-serif;">
+<tr style="background-color:darkblue;color:white;">
+
+  <th>DESCRIPTION</th>
+  <th>UNIT COST</th>
+  <th>FREQUENCY</th>
+  <th>AMOUNT</th>
+</tr>
+<tr style="background-color:white;font:bold 16px Calibri, Verdana, Arial, sans-serif;">
+    <td><p style="color:black">Successful API calls for Bank Statements for {{month}} to {{monthend}}</p>
+        <p></p>
+    </td>
+  <td>{{unit}}</td>
+  <td>{{freq}}</td>
+  <td>{{subtotal}}</td>
+  </tr>
+  <tr style="background-color : #0000FF; color:white; font:bold 16px Calibri, Verdana, Arial, sans-serif;">
+  <td></td>
+  <td></td>
+  <td>VAT (7.5%)</td>
+  <td>{{Vat}}</td>
+  </tr>
+   </tr>
+  <tr style="background-color:darkblue;color:white;font:bold 16px Calibri, Verdana, Arial, sans-serif;">
+  <td></td>
+  <td></td>
+  <td>TOTAL</td>
+  <td>{{total}}</td>
+  </tr>
+  
+</table></p>
+
+<p style="font:bold 30px Calibri, Verdana, Arial, sans-serif;text-align: center;color:black">INVOICE TOTAL : {{total}}</p>
+
+</div>
+</div>
+<div class="w3-col l4 w3-white w3-center" style="font:bold 14px Calibri, Verdana, Arial, sans-serif;text-align: center;color:black">
+ </p>
+
+
+  </div>
+<div class="w3-col l12 w3-white w3-center" style="font:normal 14px Calibri, Verdana, Arial, sans-serif;padding-left:10px">
+  <p style="text-decoration: underline darkblue">PAY TO:</p>
+<p><center>BANK NAME: FIRST BANK OF NIGERIA</center></p>
+<p><center>ACCOUNT NUMBER: 0068993221</center></p>
+<p><center>ACCOUNT NAME: CREDEQUiTY NIGERIA</center></p>
+
+  </div>
+  <br>
+
+</div>
+
+
+  
+
+<div class="w3-container w3-white">
+
+<div class="w3-row">
+  <div class="w3-col s3  w3-center"><p></p></div>
+  <div class="w3-col s3  w3-center"><p></p></div>
+  <div class="w3-col s3  "><p style="padding-left:500px;padding-top: 25px"><img src="static/images/powered.png" alt="Powered by Credequity" style="max-width:150;"></p></div>
+</div>
+  
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
